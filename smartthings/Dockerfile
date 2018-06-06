@@ -4,7 +4,7 @@ ENV LANG C.UTF-8
 
 RUN apk add --no-cache jq nodejs nodejs-npm \ 
 	&& npm config set unsafe-perm true \
-	&& npm install -g smartthings-mqtt-bridge mustache \
+	&& npm install -g smartthings-mqtt-bridge@2.1.0 mustache \
 	&& npm config set unsafe-perm false
 
 COPY template.yml /templates/
